@@ -60,7 +60,7 @@ DEPENDENCIES
   heroku
   heroku_san
   mocha
-  rails (~> 2.3.11)
+  rails (= 2.3.11)
   rcov
   sqlite3
   will_paginate (~> 2.3.11)
