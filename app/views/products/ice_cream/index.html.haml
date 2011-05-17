@@ -1,0 +1,10 @@
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title Flavors
+      - @ice_cream.each do |ice_cream|
+        %p.text #{ice_cream.title} -  #{ice_cream.description}
+    #sidebar
+      = render :partial => 'products/partials/sidebar_links'
+  = render :partial => 'global/footer'

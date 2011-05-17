@@ -1,0 +1,16 @@
+#header
+  #logo
+    = link_to (image_tag ('/images/logo_realstuff.png', :border => 0)), root_url
+  #right-header
+    #subtitle
+      %h1 Taste so good, you won't need toppings!
+    #links
+      %ul
+        %li
+          = link_to 'Home', home_root_url, :title => 'Go Home'
+        %li
+          = link_to 'Products', products_root_url, :title => 'View our selection of products'
+        %li
+          = link_to 'Services', '#', :title => 'Services we offer'
+        %li
+          = link_to 'About Us', aboutus_url, :title => 'Read More About Us'

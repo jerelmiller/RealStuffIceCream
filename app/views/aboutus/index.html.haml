@@ -1,0 +1,24 @@
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title About Us
+      %h2 The Story Behind The Real Stuff
+      %p.text The Real Stuff story began several years before Paula Miller, Founder of The Real Stuff, married her husband Mark.  When Mark was growing up, he often visited his grandfather, Arthur, on his farm.  Arthur always had fresh fruit from his own orchard, the best watermelons, the sweetest corn, and the best of all--ice cream!  Arthur would make the most amazing ice cream from the natural products of his dairy cows on the farm.
+
+      %p.text When Paula married Mark, she learned how to make homemade ice cream from Mark's mother, Grandpa Arthur's daughter.  She quickly saw the difference in taste with homemade ice cream, especially if made with the freshest and purest ingredients.  She made the basics--vanilla, chocolate, and strawberry and perfected the process so it was safe and tasty.
+
+      %p.text Then Paula and Mark's mother began experimenting with different flavors.  First was cinnamon, which has become one of our favorites.  Then experiments with chocolate--peanut butter, caramel, fudge, and more.  As she experimented, she gave samples to her friends and family who all encouraged her to start her own ice cream business.
+
+      %p.text So here it is.  We don't use pre-packaged mixes.  We use actual milk, fresh eggs, and homemade baked goodies like brownies and fudge.  No fake ingredients.  We use The Real Stuff!  And we use the safest process to ensure you get the best tasting ice cream experience ever.
+    #sidebar
+      .title Contact Info
+      %p
+        .small-title Telephone
+        .info (970) 673-7288
+        .small-title FAX
+        .info (970) 330-0808
+        .small-title Email
+        .email 
+          = mail_to('info@realstufficecream.com')
+  = render :partial => 'global/footer'
