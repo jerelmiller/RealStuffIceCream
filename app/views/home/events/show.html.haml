@@ -1,0 +1,21 @@
+%p
+  %b Title:
+  = h @event.title
+%p
+  %b Description:
+  = h @event.description
+%p
+  %b Start time:
+  = h @event.start_time
+%p
+  %b End time:
+  = h @event.end_time
+%p
+  %b Location:
+  = h @event.location
+%p
+  %b Link:
+  = h @event.link
+= link_to 'Edit', edit_event_path(@event)
+|
+\#{link_to 'Back', events_path}

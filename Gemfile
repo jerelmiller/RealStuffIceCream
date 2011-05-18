@@ -13,5 +13,4 @@ group :development do
   gem 'annotate'
   gem 'mocha'
   gem 'haml_scaffold'
-
 end

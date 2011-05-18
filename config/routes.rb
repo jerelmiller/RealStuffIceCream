@@ -1,10 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :aboutus
   map.root :controller => 'home/general_info'
   
   map.namespace :home do |home|
+    home.resources :events
     home.news 'news', :controller => 'news', :action => "index"
     home.general_info 'general_info', :controller => 'general_info'
+    home.events 'events', :controller => 'events', :action => "index"
     home.root :controller => 'general_info'
   end
   
@@ -13,6 +16,10 @@ ActionController::Routing::Routes.draw do |map|
     product.crepes 'crepes', :controller => 'crepes'
     product.others 'others', :controller => 'others'
     product.root :controller => 'ice_cream'
+  end
+  
+  map.namespace :admin do |admin|
+    admin.root :controller => 'admin'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
