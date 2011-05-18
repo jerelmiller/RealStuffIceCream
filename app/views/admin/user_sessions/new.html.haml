@@ -1,0 +1,23 @@
+.header
+  .logo
+    = image_tag '/images/logo_realstuff.png'
+  #login-page-title
+    %h1 Admin
+
+#login-main
+
+  %h1#login-title Login
+
+  .form
+    - form_for([:admin, @user_session]) do |f|
+      %p
+        = f.label :username
+        %br/
+        = f.text_field :username
+      %p
+        = f.label :password
+        %br/
+        = f.password_field :password
+      %p
+        = f.submit 'Login'
+      = f.error_messages

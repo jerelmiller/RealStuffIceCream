@@ -38,6 +38,31 @@ flavors_attributes = [ {:title => "Strawberry'd Be Nice",
                          :product => r
                         }
                      ]
+                     
+jerel = User.new(:first_name => 'Jerel',
+                 :last_name => 'Miller',
+                 :username => 'jmiller',
+                 :email => 'junktheinbox@gmail.com',
+                 :password => 'changeme',
+                 :password_confirmation => 'changeme')
+                 
+paula = User.new(:first_name => 'Paula',
+                 :last_name => 'Miller',
+                 :username => 'pmiller',
+                 :email => 'praulta@gmail.com',
+                 :password => 'changeme',
+                 :password_confirmation => 'changeme')
+                 
+mark = User.new(:first_name => 'Mark',
+                :last_name => 'Miller',
+                :email => 'braincrap@hotmail.com',
+                :username => 'mmiller',
+                :password => 'changeme',
+                :password_confirmation => 'changeme')
+
+jerel.save_without_session_maintenance
+paula.save_without_session_maintenance
+mark.save_without_session_maintenance
                  
 news_attributes.each do |news|
   News.create!(news)

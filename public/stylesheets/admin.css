@@ -7,6 +7,7 @@ body {
 	width: 90%;
 	height: 150px;
 	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 	margin: 0px auto 0px auto;
 }
 
@@ -17,19 +18,124 @@ body {
 
 }
 
-.page-title {
+.right-area {
 	float: right;
 	width: 60%;
-	line-height: 70px;
+	height: 150px;
+}
+
+.page-title {
 	font-family: 'Coming Soon', sans-serif;
-	font-size: 2em;
+	text-align: center;
+	float: left;
+	width: 300px;
+	height: 70px;
+	line-height: .2em;
+	vertical-align: middle;
+	font-size: 3.2em;
+}
+
+.top-container {
+	height: 85px;
+	width: 100%;
+}
+
+.logout {
+	width: 50%;
+	float: right;
+	height: 30px;
+	font-size: 1.2em;
+	text-align: right;
+	margin-right: 20px;
+	font-family: 'Coming Soon', sans-serif;
+	
+}
+
+.links {
+	height: 50px;
+	background: #69523D;
+	-moz-border-radius: 10px 0px 10px 0px;
 	text-align: center;
 }
 
-.main {
-	width: 90%;
-	height: 1000px;
+.links ul {
+	list-style-type: none;
+}
+
+.links li {
+	display: inline;
+	font-size: 2em;
+	font-family: 'Schoolbell', sans-serif;
+	color: white;
+	margin-right: 40px;
+	line-height: 1.8em;
+	vertical-align: middle;
+}
+
+.form {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	text-shadow: 2px 2px 4px #555;
+}
+
+a:hover {
+	color: #777;
+}
+
+#login-main {
+	width: 25%;
+	height: 400px;
 	background: #CCC;
+	margin: 0px auto 0px auto;
 	-moz-border-radius: 10px;
-	margin: 10px auto 0px auto;
+}
+
+#login-title {
+	font-family: "Coming Soon";
+	margin-left: 20px;
+}
+
+#login-page-title {
+	font-family: "Coming Soon";
+	float: right;
+	text-align: center;
+	font-size: 2em;
+	line-height: 2em;
+	width: 67%;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
 }

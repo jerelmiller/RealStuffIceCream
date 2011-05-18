@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-
   map.resources :aboutus
   map.root :controller => 'home/general_info'
   
@@ -19,7 +18,14 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.namespace :admin do |admin|
-    admin.root :controller => 'admin'
+    admin.root :controller => 'user_sessions', :action => "new"
+    admin.login 'login', :controller => 'user_sessions', :action => "new"
+    admin.logout 'logout', :controller => 'user_sessions', :action => "destroy"
+    admin.resources :user_sessions
+    admin.namespace :home do |home|
+      home.resources :users
+      home.root :controller => 'home'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
