@@ -1,7 +1,7 @@
 /* Global Styles */
 
 body {
-	background: #627086;
+	background-image: url(/images/background.png);
 }
 
 h1 {
@@ -232,7 +232,7 @@ h1 {
   margin-right: auto;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  -moz-box-shadow: -2px -2px 6px #333;
+  -moz-box-shadow: 2px 2px 6px #333;
 }
 
 .link a {
