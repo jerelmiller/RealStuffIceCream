@@ -2,9 +2,11 @@
 
 .sidebar-links
   .spacer
-  .link= link_to 'Ice Cream', products_ice_cream_url
+  .link= link_to 'Ice Cream', products_ice_cream_url, :title => 'Ice cream flavors'
   .spacer
-  .link= link_to 'Crepes', products_crepes_url
+  .link= link_to 'Crepes', products_crepes_url, :title => 'Crepe flavors'
   .spacer
-  .link= link_to 'Other', products_others_url
+  .link= link_to 'Real Stuffcakes', "#", :title => 'Real Stuffcake flavors'
+  .spacer
+  .link= link_to 'Other', products_others_url, :title => 'Other products we sell'
   .spacer
