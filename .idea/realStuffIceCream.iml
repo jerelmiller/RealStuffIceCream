@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="RailsFacetType" name="Ruby on Rails">
+      <configuration>
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_SUPPORT_REMOVED" VALUE="false" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_TESTS_SOURCES_PATCHED" VALUE="true" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_APPLICATION_ROOT" VALUE="$MODULE_DIR$" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.13, /Library/Ruby/Gems/1.8/gems/bundler-1.0.13)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.1.1, /Library/Ruby/Gems/1.8/gems/haml-3.1.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] haml_scaffold (v1.1.0, /Library/Ruby/Gems/1.8/gems/haml_scaffold-1.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] declarative_authorization (v0.5.2, /Library/Ruby/Gems/1.8/gems/declarative_authorization-0.5.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] subdomain-fu (v0.5.4, /Library/Ruby/Gems/1.8/gems/subdomain-fu-0.5.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] sqlite3 (v1.3.3, /Library/Ruby/Gems/1.8/gems/sqlite3-1.3.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] heroku (v2.1.4, /Library/Ruby/Gems/1.8/gems/heroku-2.1.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] faker (v0.9.5, /Library/Ruby/Gems/1.8/gems/faker-0.9.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] authlogic (v2.1.6, /Library/Ruby/Gems/1.8/gems/authlogic-2.1.6)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rcov (v0.9.9, /Library/Ruby/Gems/1.8/gems/rcov-0.9.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v2.3.11, /Library/Ruby/Gems/1.8/gems/rails-2.3.11)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] will_paginate (v2.3.15, /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.15)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] annotate (v2.4.0, /Library/Ruby/Gems/1.8/gems/annotate-2.4.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mocha (v0.9.12, /Library/Ruby/Gems/1.8/gems/mocha-0.9.12)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] heroku_san (v1.2.0, /Library/Ruby/Gems/1.8/gems/heroku_san-1.2.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] heroku (v2.1.4, /Library/Ruby/Gems/1.8/gems/heroku-2.1.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mocha (v0.9.12, /Library/Ruby/Gems/1.8/gems/mocha-0.9.12)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] will_paginate (v2.3.15, /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.15)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v2.3.11, /Library/Ruby/Gems/1.8/gems/rails-2.3.11)" level="application" />
+  </component>
+</module>
+
