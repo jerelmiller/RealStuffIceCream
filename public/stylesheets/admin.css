@@ -4,7 +4,7 @@ body {
 
 .header {
 	background: #CCC;
-	width: 90%;
+	width: 1100px;
 	height: 150px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -86,6 +86,20 @@ a {
 
 a:hover {
 	color: #777;
+}
+
+.main {
+	width: 1100px;
+	background: #CCC;
+	height: 200px;
+	margin: 20px auto 0px auto;
+	-moz-border-radius: 10px;
+}
+
+.dashboard {
+	padding-top: 80px;
+	text-align: center;
+	font-family: 'Schoolbell', sans-serif;
 }
 
 #login-main {

@@ -1,0 +1,24 @@
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title General Info
+      .content-text
+        %h2 Welcome To The Real Stuff!
+
+        %p.text We invite you to take a look around and imagine having a nice cold cup of ice cream in your hands right now...sound good?  We've got plenty of flavors to choose from.  We're just getting started in the Northern Colorado area so join us as we travel this delicious journey together!
+
+        %h2 Our Mission
+
+        %p.text To provide a great tasting experience with homemade style ice cream--taste that is so good, you won't need toppings.
+
+        %h2 Where Can I Buy It?
+
+        %p.text Check out the #{link_to 'events', '#'} page to find out where the vending cart will be next!
+
+        %h2 Have You Ever Thought About An Ice Cream Caterer?
+
+        %p.text We can bring the ice cream to you.  Find out on the #{link_to 'services', '#'} page
+    #sidebar
+      =render :partial => 'partials/sidebar_links'
+  = render :partial => 'global/footer'

@@ -1,0 +1,32 @@
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title General Info
+      .content-text
+
+
+        %h1 Listing events
+        %table
+          %tr
+            %th Title
+            %th Description
+            %th Start time
+            %th End time
+            %th Location
+            %th Link
+          - @events.each do |event|
+            %tr
+              %td= h event.title
+              %td= h event.description
+              %td= h event.start_time
+              %td= h event.end_time
+              %td= h event.location
+              %td= h event.link
+              %td= link_to 'Show', event
+              %td= link_to 'Edit', 'edit_home_event_path(event)'
+              %td= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete
+    #sidebar
+      =render :partial => 'partials/sidebar_links'
+  = render :partial => 'global/footer'
+

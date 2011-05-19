@@ -1,0 +1,16 @@
+.header
+  .logo
+    = image_tag '/images/logo_realstuff.png'
+  .right-area
+    .top-container
+      .logout
+        %p Welcome, #{link_to current_user.first_name, edit_admin_user_path(current_user.id)} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{link_to  'logout', admin_logout_path}
+      .page-title
+        %p Home
+    .links
+      %ul
+        %li Flavors
+        %li Events
+        %li News
+        %li Services
+  

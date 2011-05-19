@@ -1,0 +1,14 @@
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title News
+      .content-text
+        .paginate
+          = will_paginate @news
+        - @news.each do |news|
+          %h2= news.title
+          = simple_format(news.body, :class => 'text')
+    #sidebar
+      = render :partial => '/partials/sidebar_links'
+  = render :partial => 'global/footer'
