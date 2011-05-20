@@ -26,6 +26,9 @@ news_attributes = [ { :title => 'Important News',
                  ]
                  
 Product.create!(:name => "Ice Cream", :price => '5')
+Product.create!(:name => "Crepes")
+Product.create!(:name => "Real Stuffcakes")
+Product.create!(:name => "Other")
                      
 r = Product.find_by_name('Ice Cream')
                  

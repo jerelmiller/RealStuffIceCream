@@ -1,0 +1,8 @@
+= render :partial => 'admin/partials/header'
+
+.main
+  .edit-title
+    %h1 Editing #{@flavor.title}
+  = render :partial => 'admin/flavors/edit_links'  
+  = render :partial => 'admin/flavors/form'
+        

@@ -1,0 +1,17 @@
+= render :partial => 'admin/partials/header'
+
+.main
+  .edit-title
+    %h1= @flavor.title
+  = render :partial => 'admin/flavors/show_links' 
+  .content 
+    %font.labels Name: 
+    %font.text #{@flavor.title}
+    %br
+    %br
+    %font.labels Product: 
+    %font.text #{@flavor.product.name}
+    %br
+    %br
+    %font.labels Description: 
+    %font.text #{@flavor.description}

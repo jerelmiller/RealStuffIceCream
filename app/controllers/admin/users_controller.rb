@@ -9,8 +9,6 @@ class Admin::UsersController < Admin::AdminController
     end
   end
 
-  # GET /users/1
-  # GET /users/1.xml
   def show
     @user = User.find(params[:id])
 
@@ -20,8 +18,6 @@ class Admin::UsersController < Admin::AdminController
     end
   end
 
-  # GET /users/new
-  # GET /users/new.xml
   def new
     @user = User.new
 
@@ -31,7 +27,6 @@ class Admin::UsersController < Admin::AdminController
     end
   end
 
-  # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
   end

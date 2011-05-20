@@ -28,6 +28,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.logout 'logout', :controller => 'user_sessions', :action => "destroy"
     admin.resources :user_sessions
     admin.resources :users
+    admin.resources :flavors
     admin.namespace :home do |home|
       home.root :controller => 'home'
     end
