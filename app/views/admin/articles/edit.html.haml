@@ -1,0 +1,9 @@
+- content_for :title do
+  Admin: Editing #{@article.title}
+= render :partial => 'admin/partials/header'
+
+.main
+  .edit-title
+    %h1 Editing #{@article.title}
+  = render :partial => 'admin/articles/edit_links'  
+  = render :partial => 'admin/articles/form'

@@ -1,0 +1,26 @@
+- content_for :title do
+  Admin: Events Listing
+
+= render :partial => '/admin/partials/header'
+
+.main
+  .title
+    %h1 Events
+  .button
+    = link_to image_tag ('/images/icon_large_add.png', :border => 0) + ' New Event', new_admin_event_path
+  %table
+    %th#event-title Title
+    %th#event-description Description
+    %th#event-time Start Time
+    %th#event-location Location
+    -@events.each do |event|
+      %tr
+        %td= event.title
+        %td= truncate(event.description, :length => 40)
+        %td= event.start_time.strftime("%b %d, %Y %I:%M%p")
+        %td= event.location
+        %td.icon= link_to image_tag ('/images/icon_small_show.png', :border => 0), admin_event_path(event), :title => 'Show article'
+        %td.icon= link_to image_tag ('/images/icon_small_edit.png', :border => 0), edit_admin_event_path(event), :title => 'Edit article'
+        %td.icon= link_to image_tag ('/images/icon_small_delete.png', :border => 0), admin_event_path(event), :confirm => 'Are you sure?', :method => :delete, :title => 'Delete article'
+
+

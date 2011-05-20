@@ -1,0 +1,17 @@
+- content_for :title do
+  The Real Stuff News
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title News
+      .content-text
+        .paginate
+          = will_paginate @articles
+        - @articles.each do |news|
+          .news-title= news.title
+          .created-at &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;created on #{news.created_at.strftime("%B %d, %Y")}
+          = simple_format(news.body, :class => 'text')
+    #sidebar
+      = render :partial => '/partials/sidebar_links'
+  = render :partial => 'global/footer'

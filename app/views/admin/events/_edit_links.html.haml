@@ -1,0 +1,4 @@
+.edit-links
+  %ul
+    %li= link_to image_tag ('/images/icon_small_larrow.png', :border => 0) + ' back to events', admin_events_path
+    %li= link_to image_tag ('/images/icon_small_delete.png', :border => 0) + ' delete', admin_event_path(@event), :confirm => 'Are you sure?', :method => :delete

@@ -1,9 +1,9 @@
 class Admin::FlavorsController < Admin::AdminController
   
-  before_filter :load_products, :only => [:edit, :new]
+  before_filter :load_products, :only => [:edit, :update, :new, :create]
   
   def index
-    @flavors = Flavor.find(:all, :order => 'title')
+    @flavors = Flavor.find(:all, :order => 'name')
   end
   
   def new

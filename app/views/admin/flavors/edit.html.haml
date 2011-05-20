@@ -1,8 +1,10 @@
+- content_for :title do
+  Admin: Editing #{@flavor.name}
 = render :partial => 'admin/partials/header'
 
 .main
   .edit-title
-    %h1 Editing #{@flavor.title}
+    %h1 Editing #{@flavor.name}
   = render :partial => 'admin/flavors/edit_links'  
   = render :partial => 'admin/flavors/form'
         

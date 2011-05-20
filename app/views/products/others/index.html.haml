@@ -1,8 +1,15 @@
+- content_for :title do
+  The Real Stuff Other Products
 #container
   = render :partial => 'global/header'
   #main
     #content
       .title Other Products
+      %table.flavor-table 
+        - @others.each do |other|
+          %tr
+            %td.flavor #{other.name}
+            %td.description #{other.description}
     #sidebar
       = render :partial => 'products/partials/sidebar_links'
   = render :partial => 'global/footer'

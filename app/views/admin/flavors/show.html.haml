@@ -1,12 +1,14 @@
+- content_for :title do
+  Admin: Viewing #{@flavor.name}
 = render :partial => 'admin/partials/header'
 
 .main
   .edit-title
-    %h1= @flavor.title
+    %h1= @flavor.name
   = render :partial => 'admin/flavors/show_links' 
   .content 
     %font.labels Name: 
-    %font.text #{@flavor.title}
+    %font.text #{@flavor.name}
     %br
     %br
     %font.labels Product: 

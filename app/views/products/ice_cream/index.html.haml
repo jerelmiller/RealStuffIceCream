@@ -1,3 +1,5 @@
+- content_for :title do
+  The Real Stuff Ice Cream Flavors
 #container
   = render :partial => 'global/header'
   #main
@@ -6,7 +8,7 @@
       %table.flavor-table 
         - @ice_cream.each do |ice_cream|
           %tr
-            %td.flavor #{ice_cream.title}
+            %td.flavor #{ice_cream.name}
             %td.description #{ice_cream.description}
     #sidebar
       = render :partial => 'products/partials/sidebar_links'

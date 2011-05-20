@@ -1,24 +1,20 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :costs
+
   map.resources :services
 
   map.resources :aboutus
   map.root :controller => 'general_info'
   map.general_info 'general_info', :controller => 'general_info'
-  map.news 'news', :controller => 'news', :action => "index"
+  map.news 'news', :controller => 'articles', :action => "index"
   map.resources :events
   map.home 'home', :controller => 'general_info'
-  
-  map.namespace :home do |home|
-
-
-    home.events 'events', :controller => 'events', :action => "index"
-
-  end
   
   map.namespace :products do |product|
     product.ice_cream 'ice_cream', :controller => 'ice_cream'
     product.crepes 'crepes', :controller => 'crepes'
     product.others 'others', :controller => 'others'
+    product.real_stuffcakes 'real_stuffcakes', :controller => 'real_stuffcakes'
     product.root :controller => 'ice_cream'
   end
   
@@ -29,6 +25,8 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :user_sessions
     admin.resources :users
     admin.resources :flavors
+    admin.resources :articles
+    admin.resources :events
     admin.namespace :home do |home|
       home.root :controller => 'home'
     end

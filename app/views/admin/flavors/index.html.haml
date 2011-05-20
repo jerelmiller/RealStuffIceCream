@@ -1,3 +1,5 @@
+- content_for :title do
+  Admin: Flavors Listing
 = render :partial => '/admin/partials/header'
 
 .main
@@ -11,9 +13,9 @@
     %th Description
     -@flavors.each do |flavor|
       %tr
-        %td.flavor= flavor.title
+        %td.flavor= flavor.name
         %td.product= flavor.product.name
         %td.description= flavor.description
-        %td.icon= link_to image_tag ('/images/icon_small_show.png', :border => 0), admin_flavor_path(flavor)
-        %td.icon= link_to image_tag ('/images/icon_small_edit.png', :border => 0), edit_admin_flavor_path(flavor)
-        %td.icon= link_to image_tag ('/images/icon_small_delete.png', :border => 0), admin_flavor_path(flavor), :confirm => 'Are you sure?', :method => :delete
+        %td.icon= link_to image_tag ('/images/icon_small_show.png', :border => 0), admin_flavor_path(flavor), :title => "Show #{flavor.name}"
+        %td.icon= link_to image_tag ('/images/icon_small_edit.png', :border => 0), edit_admin_flavor_path(flavor), :title => "Edit #{flavor.name}"
+        %td.icon= link_to image_tag ('/images/icon_small_delete.png', :border => 0), admin_flavor_path(flavor), :confirm => 'Are you sure?', :method => :delete, :title => "Delete #{flavor.name}"

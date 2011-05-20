@@ -1,8 +1,15 @@
+- content_for :title do
+  The Real Stuff Crepe Flavors
 #container
   = render :partial => 'global/header'
   #main
     #content
       .title Crepe Flavors
+      %table.flavor-table 
+        - @crepes.each do |crepe|
+          %tr
+            %td.flavor #{crepe.name}
+            %td.description #{crepe.description}
     #sidebar
       = render :partial => 'products/partials/sidebar_links'
   = render :partial => 'global/footer'

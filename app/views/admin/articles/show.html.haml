@@ -1,0 +1,14 @@
+- content_for :title do
+  Admin: Viewing #{@article.title}
+= render :partial => 'admin/partials/header'
+
+.main
+  .edit-title
+    %h1= @article.title
+  = render :partial => 'admin/articles/show_links' 
+  .content 
+    %font.labels #{@article.title} 
+    %br
+    %font.text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;created on #{@article.created_at.strftime("%B %d, %Y")}
+    %br 
+    .body-text= simple_format(@article.body)

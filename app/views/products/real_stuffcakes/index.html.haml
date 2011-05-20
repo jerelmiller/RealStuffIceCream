@@ -1,0 +1,15 @@
+- content_for :title do
+  The Real Stuff Stuffcake Flavors
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title Real Stuffcake Flavors
+      %table.flavor-table 
+        - @real_stuffcakes.each do |real_stuffcake|
+          %tr
+            %td.flavor #{real_stuffcake.name}
+            %td.description #{real_stuffcake.description}
+    #sidebar
+      = render :partial => 'products/partials/sidebar_links'
+  = render :partial => 'global/footer'

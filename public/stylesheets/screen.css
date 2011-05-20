@@ -15,7 +15,7 @@ h1 {
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	width: 1100px;
-	height: 1020px;
+	height: 1170px;
 	background: #CCC;
 	margin: 0px auto 0px auto;
 	-moz-box-shadow: 2px 2px 15px black;
@@ -29,7 +29,7 @@ h1 {
 
 #main {
 	width: 96%;
-	height: 670px;
+	height: 820px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -181,7 +181,7 @@ h1 {
 }
 
 .text {
-	margin: 30px 20px 0px 20px;
+	margin: 30px 20px 30px 20px;
 	font-family: 'Coming Soon', sans-serif;
 }
 
@@ -207,7 +207,37 @@ h1 {
 	font-family: 'Coming Soon', sans-serif;
 }
 
+.news-title {
+	text-align: center;
+	font-family: 'Coming Soon', sans-serif;
+	margin-top: 40px;
+	font-size: 2.1em;
+	font-weight: bold;
+	background: #CCC;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 2px 2px 4px #555;
+	-webkit-box-shadow: 2px 2px 4px #555;
+}
 
+.created-at {
+	text-align: center;
+	font-family: 'Coming Soon', sans-serif;
+	font-size: 1.1em;
+	background: #CCC;
+	margin-right: 150px;
+	margin-left: 300px;
+	padding-right: 30px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	-moz-box-shadow: 2px 2px 4px #555;
+	-webkit-box-shadow: 2px 2px 4px #555;
+
+}
 
 .sidebar-links {
 	list-style-type: none;
@@ -252,7 +282,7 @@ h1 {
 }
 
 .content-text {
-	height: 620px;
+	height: 820px;
 	overflow: auto;
 }
 

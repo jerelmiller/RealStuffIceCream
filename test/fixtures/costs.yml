@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  size: MyString
+  cost: 9.99
+
+two:
+  size: MyString
+  cost: 9.99

@@ -110,10 +110,19 @@ body {
 	text-shadow: 2px 2px 4px #555;
 }
 
+.article-form {
+	width: 400px;
+	margin: 30px auto 0px auto;
+	height: 500px;
+	font-family: 'Schoolbell', sans-serif;
+	font-size: 1.2em;
+	text-shadow: 2px 2px 4px #555;
+}
+
 .edit-links {
 	text-align: center;
 	font-size: 1.2em;
-	width: 400px;
+	width: 450px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	font-family: 'Schoolbell', sans-serif;
@@ -142,7 +151,7 @@ body {
 .show-links {
 	text-align: center;
 	font-size: 1.2em;
-	width: 500px;
+	width: 550px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	font-family: 'Schoolbell', sans-serif;
@@ -199,6 +208,9 @@ a:hover {
 	height: 200px;
 	margin: 20px auto 0px auto;
 	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 2px 2px 4px black;
+	-webkit-box-shadow: 2px 2px 4px black;
 }
 
 .dashboard {
@@ -214,6 +226,8 @@ a:hover {
 	padding-bottom: 30px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+	-moz-box-shadow: 2px 2px 4px black;
+	-webkit-box-shadow: 2px 2px 4px black;
 	
 }
 
@@ -309,11 +323,32 @@ td {
 	width: 120px;
 }
 
+.body-text {
+	font-family: 'Schoolbell', sans-serif;
+	margin: 20px 20px 0px 20px;
+}
+
+#event-title {
+	width: 200px;
+}
+
+#event-description {
+	width: 300px;
+}
+
+#event-time {
+	width: 200px;
+}
+
+#event-location {
+	width: 200px;
+}
+
 .content {
-	height: 250px;
 	background: #CCC;
 	width: 80%;
 	margin: 20px auto 0px auto;
+	padding-bottom: 20px;
 	-moz-box-shadow: 2px 2px 4px #555;
 	-webkit-box-shadow: 2px 2px 4px #555;
 	-moz-border-radius: 20px;
@@ -321,7 +356,7 @@ td {
 }
 
 #login-main {
-	width: 25%;
+	width: 300px;
 	height: 400px;
 	background: #CCC;
 	margin: 0px auto 0px auto;
