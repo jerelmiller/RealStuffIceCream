@@ -1,0 +1,14 @@
+- content_for :title do
+  The Real Stuff Services
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title Catering
+      .news-title Sundae Bar
+      .news-title Ice Cream Cones Only (no sundaes)
+      
+        
+    #sidebar
+      = render :partial => 'services/partials/sidebar_links'
+  = render :partial => 'global/footer'

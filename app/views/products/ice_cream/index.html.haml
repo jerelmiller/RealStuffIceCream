@@ -6,7 +6,7 @@
     #content
       .title Ice Cream Flavors
       %table.flavor-table 
-        - @ice_cream.each do |ice_cream|
+        - @ice_cream.sort_by(&:name).each do |ice_cream|
           %tr
             %td.flavor #{ice_cream.name}
             %td.description #{ice_cream.description}

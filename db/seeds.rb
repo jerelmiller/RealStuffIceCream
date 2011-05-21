@@ -29,18 +29,7 @@ Product.create!(:name => "Ice Cream", :price => '5')
 Product.create!(:name => "Crepes")
 Product.create!(:name => "Real Stuffcakes")
 Product.create!(:name => "Other")
-                     
-r = Product.find_by_name('Ice Cream')
-                 
-flavors_attributes = [ {:title => "Strawberry'd Be Nice",
-                        :description => "Strawberry Ice Cream",
-                        :product => r
-                        },
-                        {:title => "Rocky Road",
-                         :description => "Chocolate Ice Cream with Marshmallows and nuts",
-                         :product => r
-                        }
-                     ]
+
                      
 jerel = User.new(:first_name => 'Jerel',
                  :last_name => 'Miller',
@@ -69,9 +58,4 @@ mark.save_without_session_maintenance
                  
 news_attributes.each do |news|
   News.create!(news)
-end
-
-
-flavors_attributes.each do |flavor|
-  Flavor.create!(flavor)
 end

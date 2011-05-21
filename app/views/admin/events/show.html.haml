@@ -1,24 +1,24 @@
 - content_for :title do
   Admin: Viewing #{@event.title}
+= render :partial => 'admin/partials/header'
+.main
+  .edit-title
+    %h1 Viewing #{@event.title}
+  = render :partial => 'admin/events/show_links'
+  .content 
+    %font.labels=h @event.title 
+    %br
+    %font.text #{@event.start_time.strftime("%b %d, %Y %I:%M%p")} - #{@event.end_time.strftime("%b %d, %Y %I:%M%p")} 
+    %br
+    %font.text=h @event.location
+    - if @event.link.include? "http://"
+      %br
+      %font.text=h link_to @event.link, @event.link
+    - else
+      %br
+      %font.text=h link_to @event.link, "http://#{@event.link}"
+    %br 
+    .body-text= simple_format(@event.description)
 
-%p
-  %b Title:
-  = h @event.title
-%p
-  %b Description:
-  = h @event.description
-%p
-  %b Start time:
-  = h @event.start_time
-%p
-  %b End time:
-  = h @event.end_time
-%p
-  %b Location:
-  = h @event.location
-%p
-  %b Link:
-  = h @event.link
-= link_to 'Edit', edit_event_path(@event)
-|
-\#{link_to 'Back', events_path}
+
+

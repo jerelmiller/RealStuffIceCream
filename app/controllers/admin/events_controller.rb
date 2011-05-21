@@ -1,5 +1,6 @@
 class Admin::EventsController < Admin::AdminController
 
+  EVENTS_PER_PAGE = 3
   def index
     @events = Event.find(:all, :order => 'start_time ASC')
   end
@@ -20,8 +21,10 @@ class Admin::EventsController < Admin::AdminController
     @event = Event.new(params[:event])
     
     if @event.save
-        redirect_to admin_events_path
+      flash[:success] = "You have successfully created #{@event.title}"
+      redirect_to admin_events_path
     else
+      flash[:error] = "There was a problem creating the event"
       render :action => "new"
     end
   end
@@ -30,16 +33,21 @@ class Admin::EventsController < Admin::AdminController
     @event = Event.find(params[:id])
 
     if @event.update_attributes(params[:event])
+      flash[:success] = "You have successfully updated #{@event.title}"
       redirect_to admin_events_path
     else
+      flash[:error] = "There was a problem updating the flavor"
       render :action => "edit"
     end
   end
 
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
-    
-    redirect_to admin_events_path
+    if @event.destroy
+      flash[:success] = "You have sucessfully deleted #{@event.title}"
+      redirect_to admin_events_path
+    else
+      flash[:error] = "There was a problem deleting #{@event.title}"
+    end
   end
 end

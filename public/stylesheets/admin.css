@@ -4,11 +4,12 @@ body {
 
 .header {
 	background: #CCC;
-	width: 1100px;
+	width: 1150px;
 	height: 150px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-box-shadow: 2px 2px 8px black;
+	-webkit-box-shadow: 2px 2px 8px black;
 	margin: 0px auto 0px auto;
 }
 
@@ -21,7 +22,7 @@ body {
 
 .right-area {
 	float: right;
-	width: 60%;
+	width: 50%;
 	height: 150px;
 }
 
@@ -54,6 +55,7 @@ body {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-box-shadow: 2px 2px 4px #555;
+	-webkit-box-shadow: 2px 2px 4px #555;
 	text-align: center;
 
 	
@@ -73,7 +75,6 @@ body {
 	-moz-border-radius: 10px 0px 10px 0px;
 	-webkit-border-radius: 10px 0px 10px 0px;
 	text-align: center;
-	
 }
 
 .links ul {
@@ -92,7 +93,6 @@ body {
 
 .links a {
 	text-shadow: 2px 2px 8px black;
-	
 }
 
 .login-form {
@@ -101,19 +101,10 @@ body {
 	width: 80%;
 }
 
-.flavor-form {
+.form {
 	width: 400px;
 	margin: 30px auto 0px auto;
-	height: 350px;
-	font-family: 'Schoolbell', sans-serif;
-	font-size: 1.2em;
-	text-shadow: 2px 2px 4px #555;
-}
-
-.article-form {
-	width: 400px;
-	margin: 30px auto 0px auto;
-	height: 500px;
+	height: 80%;
 	font-family: 'Schoolbell', sans-serif;
 	font-size: 1.2em;
 	text-shadow: 2px 2px 4px #555;
@@ -131,6 +122,17 @@ body {
 	vertical-align: middle;
 	margin: 10px auto 0px auto;
 
+}
+
+.errors {
+	background: #FFBCC2;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	list-style-type: none;
+    border: solid;
+    border-color: red;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .edit-links ul {
@@ -168,6 +170,7 @@ body {
 	margin-left: 40px;
 }
 
+
 .show-links ul {
 	list-style-type: none;
 }
@@ -186,10 +189,25 @@ body {
 .label {
 	background: #CCC;
 	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 	text-align: center;
 	padding-bottom: 15px;
 	padding-top: 10px;
+	margin-bottom: 20px;
 	-moz-box-shadow: 2px 2px 4px #555;
+	-webkit-box-shadow: 2px 2px 4px #555;
+}
+
+.login-label {
+	background: #CCC;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	text-align: center;
+	padding-bottom: 15px;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	-moz-box-shadow: 2px 2px 4px #555;
+	-webkit-box-shadow: 2px 2px 4px #555;
 }
 
 a {
@@ -203,10 +221,10 @@ a:hover {
 }
 
 .dashboard-main {
-	width: 1100px;
+	width: 1150px;
 	background: #CCC;
-	height: 200px;
 	margin: 20px auto 0px auto;
+	padding-top: 80px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-box-shadow: 2px 2px 4px black;
@@ -214,13 +232,15 @@ a:hover {
 }
 
 .dashboard {
-	padding-top: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 70px;
 	text-align: center;
 	font-family: 'Schoolbell', sans-serif;
 }
 
 .main {
-	width: 1100px;
+	width: 1150px;
 	background: #AAA;
 	margin: 20px auto 0px auto;
 	padding-bottom: 30px;
@@ -303,11 +323,13 @@ td {
 	padding-left: 10px;
 	height: 30px;
 	-moz-box-shadow: 0px 2px 2px #555;
+	-webkit-box-shadow: 0px 2px 2px #555;
 }
 
 .icon {
 	background: #AAA;
 	-moz-box-shadow: 0px 0px 0px;
+	-webkit-box-shadow: 0px 0px 0px;
 	width: 30px;
 }
 
@@ -355,17 +377,37 @@ td {
 	-webkit-border-radius: 20px;
 }
 
+.main-link {
+	width: 100px;
+	margin: 20px auto 0px auto;
+	font-family: 'Schoolbell', sans-serif;
+	font-size: 2em;
+}
+
 #login-main {
 	width: 300px;
 	height: 400px;
-	background: #CCC;
+	background: #AAA;
 	margin: 0px auto 0px auto;
 	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 2px 2px 4px black;
+	-webkit-box-shadow: 2px 2px 4px black;
 }
 
 #login-title {
-	font-family: "Coming Soon";
-	margin-left: 20px;
+	background: #69523D;
+	height: 40px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	-moz-box-shadow: 0px 2px 4px black;
+	-webkit-box-shadow: 0px 2px 4px black;
+	text-shadow: 2px 2px 8px black;
+	text-align: center;
+	color: white;
+	font-family: 'Schoolbell', sans-serif;
+	font-size: 2em;
+	
 }
 
 #login-page-title {
@@ -377,32 +419,32 @@ td {
 	width: 67%;
 }
 
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+
+.flash {
+  width: 600px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 20px;
 }
 
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+.flash p {
+  font-size: 1.4em;
+  text-align: center; 
+  font-family: 'Schoolbell', sans-serif;
 }
 
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+.flash.success {
+  background: #F0FFF0;
+  color: #060; 
+  border: solid;
+  border-color: #060;
 }
 
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
+.flash.error {
+  background: #FFF0F0;
+  color: #900; 
+  border: solid;
+  border-color: #900;
 }

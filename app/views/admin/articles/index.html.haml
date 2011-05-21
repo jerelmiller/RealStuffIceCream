@@ -5,6 +5,7 @@
 .main
   .title
     %h1 &nbsp; &nbsp; &nbsp; &nbsp;News Articles
+  = render :partial => 'global/flash', :locals => {:flash => flash}
   .button
     = link_to image_tag ('/images/icon_large_add.png', :border => 0) + ' New Article', new_admin_article_path
   %table

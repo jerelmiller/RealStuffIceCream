@@ -6,11 +6,14 @@
       %h1 Taste so good, you won't need toppings!
     #links
       %ul
+        - if current_user
+          %li
+            = link_to 'Admin', admin_root_url, :title => 'Go to admin'
         %li
           = link_to 'Home', home_url, :title => 'Go Home'
         %li
           = link_to 'Products', products_root_url, :title => 'View our selection of products'
         %li
-          = link_to 'Services', '#', :title => 'Services we offer'
+          = link_to 'Services', services_root_path, :title => 'Services we offer'
         %li
           = link_to 'About Us', aboutus_url, :title => 'Read More About Us'

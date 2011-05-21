@@ -4,12 +4,11 @@
   .right-area
     .top-container
       .logout
-        %p Welcome, #{link_to current_user.first_name, edit_admin_user_path(current_user.id)} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{link_to  'logout', admin_logout_path}
+        %p  Welcome, #{link_to current_user.first_name, edit_admin_user_path(current_user.id)} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{link_to  'logout', admin_logout_path}
     .links
       %ul
-        %li= link_to 'Home', admin_root_url
+        %li= link_to 'View Site', root_url
         %li= link_to 'Flavors', admin_flavors_path
         %li= link_to 'Events', admin_events_path
         %li= link_to 'News', admin_articles_path
-        %li Services
   

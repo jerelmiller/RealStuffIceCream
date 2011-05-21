@@ -16,11 +16,11 @@
 
         .news-title Where Can I Buy It?
 
-        %p.text Check out the #{link_to 'events', '#'} page to find out where the vending cart will be next!
+        %p.text Check out the #{link_to 'events', events_url} page to find out where the vending cart will be next!
 
         .news-title Have You Ever Thought About An Ice Cream Caterer?
 
-        %p.text We can bring the ice cream to you.  Find out on the #{link_to 'services', '#'} page
+        %p.text We can bring the ice cream to you.  Find out on the #{link_to 'services', services_root_url} page
     #sidebar
       =render :partial => 'partials/sidebar_links'
   = render :partial => 'global/footer'

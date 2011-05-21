@@ -1,0 +1,12 @@
+- content_for :title do
+  The Real Stuff Services
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title Ordering
+      %table.flavor-table 
+        
+    #sidebar
+      = render :partial => 'services/partials/sidebar_links'
+  = render :partial => 'global/footer'

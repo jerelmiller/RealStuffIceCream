@@ -5,6 +5,7 @@
 .main
   .edit-title
     %h1 Editing #{@flavor.name}
+  = render :partial => 'global/flash', :locals => {:flash => flash}
   = render :partial => 'admin/flavors/edit_links'  
   = render :partial => 'admin/flavors/form'
         

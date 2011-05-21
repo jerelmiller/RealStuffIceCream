@@ -1,33 +1,13 @@
 - content_for :title do
   Admin: New Event
 
-%h1 New event
-- form_for(@event) do |f|
-  = f.error_messages
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-  %p
-    = f.label :start_time
-    %br/
-    = f.datetime_select :start_time
-  %p
-    = f.label :end_time
-    %br/
-    = f.datetime_select :end_time
-  %p
-    = f.label :location
-    %br/
-    = f.text_field :location
-  %p
-    = f.label :link
-    %br/
-    = f.text_field :link
-  %p
-    = f.submit 'Create'
-= link_to 'Back', events_path
+= render :partial => 'admin/partials/header'
+.main
+  .edit-title
+    %h1 New Event
+  = render :partial => 'global/flash', :locals => {:flash => flash}
+  .edit-links
+    %ul
+      %li= link_to image_tag ('/images/icon_small_larrow.png', :border => 0) + ' back to events', admin_events_path
+  = render :partial => 'admin/events/form'
+

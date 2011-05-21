@@ -1,14 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :costs
 
-  map.resources :services
-
   map.resources :aboutus
   map.root :controller => 'general_info'
   map.general_info 'general_info', :controller => 'general_info'
   map.news 'news', :controller => 'articles', :action => "index"
-  map.resources :events
+  map.events 'events', :controller => 'events', :action => "index"
   map.home 'home', :controller => 'general_info'
+  
+  map.namespace :services do |service|
+    service.catering 'catering', :controller => 'catering'
+    service.ordering 'ordering', :controller => 'ordering'
+    service.root :controller => 'catering'
+  end
   
   map.namespace :products do |product|
     product.ice_cream 'ice_cream', :controller => 'ice_cream'
@@ -27,9 +31,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :flavors
     admin.resources :articles
     admin.resources :events
-    admin.namespace :home do |home|
-      home.root :controller => 'home'
-    end
+    admin.home 'home', :controller => 'home'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

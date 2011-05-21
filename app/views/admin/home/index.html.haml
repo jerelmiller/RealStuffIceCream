@@ -1,0 +1,8 @@
+- content_for :title do
+  Admin: Home
+= render :partial => '/admin/partials/header'
+
+.dashboard-main
+  = render :partial => 'global/flash', :locals => {:flash => flash}
+  %h1.dashboard This is your admin dashboard. Select a link up top to view and edit that component.
+  
