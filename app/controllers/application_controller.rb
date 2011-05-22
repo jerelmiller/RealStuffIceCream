@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   filter_parameter_logging :password
   helper_method :current_user_session, :current_user
-
-  private
   
+  private
+
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
       @current_user_session = UserSession.find
@@ -22,19 +22,19 @@ class ApplicationController < ActionController::Base
       return @current_user
     end
         
-     def require_user
-       unless current_user
-         flash[:error] = "You must log in if you want to access that."
-         redirect_to root_url(:subdomain => 'admin')
-         return false
-       end
-     end
+    def require_user
+      unless current_user
+        flash[:error] = "You must log in if you want to access that."
+        redirect_to root_url(:subdomain => 'admin')
+        return false
+      end
+    end
      
-     def require_no_user
-       if current_user
-         flash[:error] = "You must be logged out to access #{request.path}. <a href=\"/logout\">log out</a>?"
-         redirect_to admin_home_root_url
-         return false
-       end
-     end
+    def require_no_user
+      if current_user
+        flash[:error] = "You must be logged out to access #{request.path}. <a href=\"/logout\">log out</a>?"
+        redirect_to root_url(:subdomain => 'admin')
+        return false
+      end
+    end
 end

@@ -1,6 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
 
-
   map.with_options :conditions => { :subdomain => 'admin' } do |admin|
     admin.root :controller => 'admin/user_sessions', :action => 'new'
     admin.resources :flavors, :controller => 'admin/flavors'
@@ -12,7 +11,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.logout 'logout', :controller => 'admin/user_sessions', :action => "destroy"
     admin.home 'home', :controller => 'admin/home'
   end
-
+  
   map.resources :aboutus
   map.root :controller => 'general_info'
   map.general_info 'general_info', :controller => 'general_info'
