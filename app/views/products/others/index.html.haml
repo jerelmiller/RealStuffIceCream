@@ -8,6 +8,8 @@
       %table.flavor-table 
         - @others.each do |other|
           %tr
+          - if !time_distance(other.created_at)
+            %td.new_icon= image_tag('/images/icon_new.png')
             %td.flavor #{other.name}
             %td.description #{other.description}
     #sidebar

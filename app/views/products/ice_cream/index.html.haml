@@ -8,7 +8,9 @@
       %table.flavor-table 
         - @ice_cream.sort_by(&:name).each do |ice_cream|
           %tr
-            %td.flavor #{ice_cream.name}
+          - if !time_distance(ice_cream.created_at)
+            %td.new_icon= image_tag('/images/icon_new.png')
+            %td.flavor= ice_cream.name
             %td.description #{ice_cream.description}
     #sidebar
       = render :partial => 'products/partials/sidebar_links'

@@ -290,6 +290,10 @@ h1 {
   -webkit-box-shadow: 2px 2px 6px #333;
 }
 
+.new_icon {
+	width: 30px;
+}
+
 .link a {
 	font-size: 1.7em;
 	text-decoration: none;

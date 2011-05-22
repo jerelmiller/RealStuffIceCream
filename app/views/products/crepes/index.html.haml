@@ -8,6 +8,8 @@
       %table.flavor-table 
         - @crepes.each do |crepe|
           %tr
+          - if !time_distance(crepe.created_at)
+            %td.new_icon= image_tag('/images/icon_new.png')
             %td.flavor #{crepe.name}
             %td.description #{crepe.description}
     #sidebar
