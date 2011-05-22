@@ -1,0 +1,43 @@
+- content_for :title do
+  Admin: Editing #{@user.first_name} #{@user.last_name}
+
+= render :partial => 'admin/partials/header'
+
+.main
+  .edit-title
+    %h1 Editing #{@user.first_name} #{@user.last_name}
+  = render :partial => 'global/flash', :locals => {:flash => flash}
+  .edit-links
+    %ul
+      %li= link_to image_tag ('/images/icon_small_larrow.png', :border => 0) + ' back', :back
+  .form
+    - form_for([@user]) do |f|
+      = f.error_messages
+      .label
+        = f.label :username
+        %br/
+        = f.text_field :username
+      .label
+        = f.label :email
+        %br/
+        = f.text_field :email
+      .label
+        = f.label :password
+        (leave blank if not changing)
+        %br/
+        = f.password_field :password
+      .label
+        = f.label :password_confirmation
+        %br
+        = f.password_field :password_confirmation
+      .label
+        = f.label :first_name
+        %br/
+        = f.text_field :first_name
+      .label
+        = f.label :last_name
+        %br/
+        = f.text_field :last_name
+      %p
+        = f.submit 'Update'
+

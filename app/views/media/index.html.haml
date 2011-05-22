@@ -1,0 +1,14 @@
+- content_for :title do
+  The Real Stuff Media
+#container
+  = render :partial => 'global/header'
+  #main
+    #content
+      .title Media
+      .news-title The Real Stuff Web Spot
+      .video
+        <iframe src="http://player.vimeo.com/video/21218942?title=0&amp;byline=0&amp;portrait=0" width="450" height="300" frameborder="0"></iframe>
+      
+    #sidebar
+      = render :partial => 'partials/sidebar_links'
+  = render :partial => 'global/footer'

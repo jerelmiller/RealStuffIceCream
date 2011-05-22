@@ -9,7 +9,7 @@
   %h1#login-title Login
 
   .login-form
-    - form_for([@user_session]) do |f|
+    - form_for([:admin, @user_session]) do |f|
       = f.error_messages
       .login-label
         = f.label :username
@@ -22,4 +22,4 @@
       %p
         = f.submit 'Login'
   .main-link
-    = link_to image_tag('/images/icon_small_larrow.png', :border => 0) + ' main', root_url(:subdomain => false)
+    = link_to image_tag('/images/icon_small_larrow.png', :border => 0) + ' main', root_url

@@ -1,5 +1,17 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :costs
+
+
+  map.with_options :conditions => { :subdomain => 'admin' } do |admin|
+    admin.root :controller => 'admin/user_sessions', :action => 'new'
+    admin.resources :flavors, :controller => 'admin/flavors'
+    admin.resources :users, :controller => 'admin/users'
+    admin.resources :flavors, :controller => 'admin/flavors'
+    admin.resources :articles, :controller => 'admin/articles'
+    admin.resources :events, :controller => 'admin/events'
+    admin.resources :user_sessions, :controller => 'admin/user_sessions'
+    admin.logout 'logout', :controller => 'admin/user_sessions', :action => "destroy"
+    admin.home 'home', :controller => 'admin/home'
+  end
 
   map.resources :aboutus
   map.root :controller => 'general_info'
@@ -7,6 +19,7 @@ ActionController::Routing::Routes.draw do |map|
   map.news 'news', :controller => 'articles', :action => "index"
   map.events 'events', :controller => 'events', :action => "index"
   map.home 'home', :controller => 'general_info'
+  map.media 'media', :controller => 'media'
   
   map.namespace :services do |service|
     service.catering 'catering', :controller => 'catering'
@@ -20,18 +33,6 @@ ActionController::Routing::Routes.draw do |map|
     product.others 'others', :controller => 'others'
     product.real_stuffcakes 'real_stuffcakes', :controller => 'real_stuffcakes'
     product.root :controller => 'ice_cream'
-  end
-  
-  map.namespace :admin do |admin|
-    admin.root :controller => 'user_sessions', :action => "new"
-    admin.login 'login', :controller => 'user_sessions', :action => "new"
-    admin.logout 'logout', :controller => 'user_sessions', :action => "destroy"
-    admin.resources :user_sessions
-    admin.resources :users
-    admin.resources :flavors
-    admin.resources :articles
-    admin.resources :events
-    admin.home 'home', :controller => 'home'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

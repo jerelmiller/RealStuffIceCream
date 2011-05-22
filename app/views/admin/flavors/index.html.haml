@@ -7,7 +7,7 @@
     %h1 Flavors
   = render :partial => 'global/flash', :locals => {:flash => flash}
   .button
-    = link_to image_tag ('/images/icon_large_add.png', :border => 0) + ' New Flavor', new_admin_flavor_path
+    = link_to image_tag ('/images/icon_large_add.png', :border => 0) + ' New Flavor', new_flavor_path
   %table
     %th Flavor
     %th Product
@@ -17,6 +17,6 @@
         %td.flavor= flavor.name
         %td.product= flavor.product.name
         %td.description= flavor.description
-        %td.icon= link_to image_tag ('/images/icon_small_show.png', :border => 0), admin_flavor_path(flavor), :title => "Show #{flavor.name}"
-        %td.icon= link_to image_tag ('/images/icon_small_edit.png', :border => 0), edit_admin_flavor_path(flavor), :title => "Edit #{flavor.name}"
-        %td.icon= link_to image_tag ('/images/icon_small_delete.png', :border => 0), admin_flavor_path(flavor), :confirm => 'Are you sure?', :method => :delete, :title => "Delete #{flavor.name}"
+        %td.icon= link_to image_tag ('/images/icon_small_show.png', :border => 0), flavor_path(flavor), :title => "Show #{flavor.name}"
+        %td.icon= link_to image_tag ('/images/icon_small_edit.png', :border => 0), edit_flavor_path(flavor), :title => "Edit #{flavor.name}"
+        %td.icon= link_to image_tag ('/images/icon_small_delete.png', :border => 0), flavor_path(flavor), :confirm => 'Are you sure?', :method => :delete, :title => "Delete #{flavor.name}"

@@ -7,8 +7,10 @@
     %h1= @article.title
   = render :partial => 'admin/articles/show_links' 
   .content 
-    %font.labels #{@article.title} 
+    %font.labels #{@article.title}
+    - if !time_distance(@article.created_at)
+      = image_tag('/images/smallnew.gif')
     %br
     %font.text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;created on #{@article.created_at.strftime("%B %d, %Y")}
     %br 
-    .body-text= simple_format(@article.body)
+    .body-text= simple_format (auto_link(@article.body))

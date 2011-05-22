@@ -18,7 +18,7 @@ class Admin::FlavorsController < Admin::AdminController
     @flavor = Flavor.new(params[:flavor])
     if @flavor.save
       flash[:success] = "You have successfully created #{@flavor.name}"
-      redirect_to admin_flavors_path
+      redirect_to flavors_path
     else
       flash[:error] = "There was a problem creating the flavor"
       render :action => "new"
@@ -34,7 +34,7 @@ class Admin::FlavorsController < Admin::AdminController
 
     if @flavor.update_attributes(params[:flavor])
       flash[:success] = "You have successfully updated #{@flavor.name}"
-      redirect_to admin_flavors_path
+      redirect_to flavors_path
     else
       flash[:error] = "There was a problem updating the flavor"
       render :action => "edit"
@@ -49,7 +49,7 @@ class Admin::FlavorsController < Admin::AdminController
     @flavor = Flavor.find(params[:id])
     if @flavor.destroy
       flash[:success] = "You have successfully deleted #{@flavor.name}"
-      redirect_to admin_flavors_path
+      redirect_to flavors_path
     else
       flash[:error] = "There was a problem deleting #{@flavor.name}"
     end

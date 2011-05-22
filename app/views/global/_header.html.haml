@@ -1,14 +1,22 @@
 #header
-  #logo
-    = link_to image_tag ('/images/logo_realstuff.png', :border => 0), root_url
+  #logo-container
+    #logo
+      = link_to image_tag ('/images/logo_realstuff.png', :border => 0), root_url
+    #like-link
+      <iframe src="http://www.facebook.com/plugins/like.php?app_id=155399517860680&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FThe-Real-Stuff-Ice-Cream%2F115207285229962&amp;colorscheme=light&amp;font&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden;  width:300px; height: 35px" allowTransparency="true"></iframe>
   #right-header
     #subtitle
       %h1 Taste so good, you won't need toppings!
+    #empty
+      #social-links
+        = link_to image_tag('/images/facebook_share_icon.gif', :border => 0), "http://www.facebook.com/pages/The-Real-Stuff-Ice-Cream/115207285229962", :target => :blank
+        &nbsp;&nbsp;&nbsp;
+        = link_to image_tag('/images/twitter_icon.png', :border => 0), "http://www.twitter.com/TheRealStuffCO", :target => :blank
     #links
       %ul
         - if current_user
           %li
-            = link_to 'Admin', admin_root_url, :title => 'Go to admin'
+            = link_to 'Admin', home_url(:subdomain => 'admin'), :title => 'Go to admin'
         %li
           = link_to 'Home', home_url, :title => 'Go Home'
         %li

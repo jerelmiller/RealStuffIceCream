@@ -8,5 +8,5 @@
   = render :partial => 'global/flash', :locals => {:flash => flash}
   .edit-links
     %ul
-      %li= link_to image_tag ('/images/icon_small_larrow.png', :border => 0) + ' back to news articles', admin_articles_path
+      %li= link_to image_tag ('/images/icon_small_larrow.png', :border => 0) + ' back to news articles', articles_path
   = render :partial => 'admin/articles/form'

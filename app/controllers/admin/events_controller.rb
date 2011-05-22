@@ -3,6 +3,7 @@ class Admin::EventsController < Admin::AdminController
   EVENTS_PER_PAGE = 3
   def index
     @events = Event.find(:all, :order => 'start_time ASC')
+    @events_count = Event.count
   end
 
   def show
@@ -22,7 +23,7 @@ class Admin::EventsController < Admin::AdminController
     
     if @event.save
       flash[:success] = "You have successfully created #{@event.title}"
-      redirect_to admin_events_path
+      redirect_to events_path
     else
       flash[:error] = "There was a problem creating the event"
       render :action => "new"
@@ -34,7 +35,7 @@ class Admin::EventsController < Admin::AdminController
 
     if @event.update_attributes(params[:event])
       flash[:success] = "You have successfully updated #{@event.title}"
-      redirect_to admin_events_path
+      redirect_to events_path
     else
       flash[:error] = "There was a problem updating the flavor"
       render :action => "edit"
@@ -45,7 +46,7 @@ class Admin::EventsController < Admin::AdminController
     @event = Event.find(params[:id])
     if @event.destroy
       flash[:success] = "You have sucessfully deleted #{@event.title}"
-      redirect_to admin_events_path
+      redirect_to events_path
     else
       flash[:error] = "There was a problem deleting #{@event.title}"
     end

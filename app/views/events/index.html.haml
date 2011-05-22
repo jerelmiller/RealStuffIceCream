@@ -20,7 +20,7 @@
               .url= link_to event.link, "#{event.link}"
             - else
               .url= link_to event.link, "http://#{event.link}"
-            .body-text= h event.description
+            .text= h event.description
     #sidebar
       =render :partial => 'partials/sidebar_links'
   = render :partial => 'global/footer'

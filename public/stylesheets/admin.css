@@ -113,7 +113,7 @@ body {
 .edit-links {
 	text-align: center;
 	font-size: 1.2em;
-	width: 450px;
+	width: 600px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	font-family: 'Schoolbell', sans-serif;
@@ -153,7 +153,7 @@ body {
 .show-links {
 	text-align: center;
 	font-size: 1.2em;
-	width: 550px;
+	width: 700px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	font-family: 'Schoolbell', sans-serif;
@@ -297,13 +297,40 @@ a:hover {
 	width: 240px;
 	font-size: 2.5em;
 	font-family: 'Schoolbell', sans-serif;
-	margin: 40px auto 0px auto;
+	margin: 30px auto 0px auto;
+}
+
+.count {
+	font-size: 2em;
+	font-family: 'Schoolbell', sans-serif;
+	width: 500px;
+	margin: 20px 0px 0px 200px;
+}
+
+.count font {
+	background: #CCC;
+	padding-left: 20px;
+	padding-right: 20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 2px 2px 4px #555;
+	-webkit-box-shadow: 2px 2px 4px #555;
 }
 
 .text {
 	font-family: 'Schoolbell', sans-serif;
 	font-size: 1.5em;
 	margin-left: 30px;
+}
+
+.text a {
+	color: #3B5998;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+.text a:hover {
+	text-decoration: underline;
 }
 
 table {
@@ -348,6 +375,16 @@ td {
 .body-text {
 	font-family: 'Schoolbell', sans-serif;
 	margin: 20px 20px 0px 20px;
+}
+
+.body-text a {
+	color: #3B5998;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+.body-text a:hover {
+	text-decoration: underline;
 }
 
 #event-title {

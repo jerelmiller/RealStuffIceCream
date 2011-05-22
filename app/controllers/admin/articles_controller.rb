@@ -3,6 +3,7 @@ class Admin::ArticlesController < Admin::AdminController
   
   def index
     @articles = Article.find(:all, :order => 'created_at DESC')
+    @articles_count = Article.count
   end
 
   def show
@@ -18,23 +19,23 @@ class Admin::ArticlesController < Admin::AdminController
   end
 
   def create
-    @article = Article.new(params[:news])
+    @article = Article.new(params[:article])
 
     if @article.save
       flash[:success] = "You have successfully created #{@article.title}"
-      admin_news_path
+      redirect_to articles_path
     else
       flash[:error] = "There was a problem creating the news article"
-      render :action => 'new'
+      render :action => "new"
     end
   end
 
   def update
     @article = Article.find(params[:id])
 
-    if @article.update_attributes(params[:news])
+    if @article.update_attributes(params[:article])
       flash[:success] = "You have successfully updated #{@article.title}"
-      redirect_to admin_articles_path
+      redirect_to articles_path
     else
       flash[:error] = "There was a problem updating the news article"
       render :action => "edit"
@@ -45,7 +46,7 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.find(params[:id])
     if @article.destroy
       flash[:success] = "You have successfully deleted #{@article.title}"
-      redirect_to admin_articles_path
+      redirect_to articles_path
     else
       flash[:error] = "There was a problem deleting #{@article.title}"
     end
