@@ -8,17 +8,23 @@
   .content 
     %font.labels=h @event.title 
     %br
-    %font.text #{@event.start_time.strftime("%b %d, %Y %I:%M%p")} - #{@event.end_time.strftime("%b %d, %Y %I:%M%p")} 
+    %font.text= @event.start_date.to_s(:date)
+    %font.text.no-margin at
+    %font.text.no-margin= @event.start_time.to_s(:time)
+    - if valid_date(@event.end_date, @event.end_time)
+      %font.text.no-margin &nbsp; - &nbsp; 
+      - if same_date(@event.start_date, @event.end_date)
+        %font.text.no-margin= @event.end_time.to_s(:time)
+      - else
+        %font.text.no-margin= @event.end_date.to_s(:date)
+        %font.text.no-margin at
+        %font.text.no-margin= @event.end_time.to_s(:time)
     %br
     %font.text=h @event.location
-    - if @event.link.include? "http://"
-      %br
-      %font.text=h link_to @event.link, @event.link
-    - else
-      %br
-      %font.text=h link_to @event.link, "http://#{@event.link}"
+    %br
+    %font.text= auto_link(@event.link) 
     %br 
-    .body-text= simple_format(@event.description)
+    .body-text= simple_format(auto_link(@event.description))
 
 
 

@@ -20,7 +20,7 @@
       %tr
         %td= event.title
         %td= truncate(event.description, :length => 40)
-        %td= event.start_time.strftime("%b %d, %Y %I:%M%p")
+        %td= event.start_time.to_s(:datetime)
         %td= event.location
         %td.icon= link_to image_tag ('/images/icon_small_show.png', :border => 0), event_path(event), :title => 'Show article'
         %td.icon= link_to image_tag ('/images/icon_small_edit.png', :border => 0), edit_event_path(event), :title => 'Edit article'

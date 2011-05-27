@@ -1,0 +1,14 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %title= yield :title
+    = stylesheet_link_tag 'admin', 'jquery-ui-1.8.13.custom.css'
+    = javascript_include_tag 'jquery-1.5.1.min.js', 'application'
+    = javascript_include_tag 'jquery-ui-1.8.13.custom.min.js'
+    = google_webfont_stylesheet("Just Me Again Down Here")
+    = google_webfont_stylesheet("Schoolbell")
+    = google_webfont_stylesheet("Coming Soon")
+  %body
+    = yield

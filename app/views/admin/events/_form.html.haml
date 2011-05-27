@@ -12,11 +12,15 @@
     .label
       = f.label :start_time
       %br/
-      = f.datetime_select :start_time, :default => Time.now
+      = f.text_field :start_date, :size => 10, :value => (@event.start_date.blank? ? '' : @event.start_date.to_s(:dateNums))
+      at
+      = f.text_field :start_time, :size => 10, :value => (@event.start_time.blank? ? '' : @event.start_time.to_s(:time))
     .label
       = f.label :end_time
       %br/
-      = f.datetime_select :end_time, :include_blank => :true
+      = f.text_field :end_date, :size => 10, :value => (@event.end_date.blank? ? '' : @event.end_date.to_s(:dateNums))
+      at
+      = f.text_field :end_time, :size => 10, :value => (@event.end_time.blank? ? '' : @event.end_time.to_s(:time))
     .label
       = f.label :location
       %br/

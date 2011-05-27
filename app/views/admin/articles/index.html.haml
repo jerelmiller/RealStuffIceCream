@@ -17,8 +17,8 @@
     -@articles.each do |article|
       %tr
         %td.flavor= article.title
-        %td.product= article.created_at.strftime("%B %d, %Y")
-        %td.description= truncate(auto_link(article.body), :length => 70)
+        %td.product= article.created_at.to_s(:date)
+        %td.description= truncate(article.body, :length => 70)
         %td.icon= link_to image_tag ('/images/icon_small_show.png', :border => 0), article_path(article), :title => 'Show article'
         %td.icon= link_to image_tag ('/images/icon_small_edit.png', :border => 0), edit_article_path(article), :title => 'Edit article'
         %td.icon= link_to image_tag ('/images/icon_small_delete.png', :border => 0), article_path(article), :confirm => 'Are you sure?', :method => :delete, :title => 'Delete article'

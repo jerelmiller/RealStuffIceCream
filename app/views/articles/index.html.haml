@@ -13,7 +13,7 @@
             = news.title
             - if !time_distance(news.created_at)
               = image_tag('/images/icon_new.png')
-          .created-at &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;created on #{news.created_at.strftime("%B %d, %Y")}
+          .created-at &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;created on #{news.created_at.to_s(:date)}
           .text= simple_format(auto_link(news.body))
     #sidebar
       = render :partial => '/partials/sidebar_links'

@@ -37,7 +37,7 @@ class Admin::EventsController < Admin::AdminController
       flash[:success] = "You have successfully updated #{@event.title}"
       redirect_to events_path
     else
-      flash[:error] = "There was a problem updating the flavor"
+      flash[:error] = "There was a problem updating the event"
       render :action => "edit"
     end
   end
