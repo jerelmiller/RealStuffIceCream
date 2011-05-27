@@ -1,7 +1,7 @@
 class Admin::UserSessionsController < ApplicationController
   layout "admin"
   before_filter :require_user, :only => :destroy
-  before_filter :logged_in, :only => :new
+  #before_filter :logged_in, :only => :new
 
   def new
     @user_session = UserSession.new

@@ -9,6 +9,12 @@ config.action_controller.consider_all_requests_local = false
 config.action_controller.perform_caching             = true
 config.action_view.cache_template_loading            = true
 
+if config.action_controller.session
+  config.action_controller.session[:domain] = '.heroku.com'
+else
+  config.action_controller.session = { :domain => '.heroku.com' }
+end
+
 # See everything in the log (default is :info)
 # config.log_level = :debug
 
