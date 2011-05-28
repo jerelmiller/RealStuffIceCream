@@ -2,8 +2,9 @@ class Admin::EventsController < Admin::AdminController
 
   EVENTS_PER_PAGE = 3
   def index
-    @events = Event.find(:all, :order => 'start_time ASC')
+    @events = Event.all.sort_by {|x| [x.start_date, x.start_time]}
     @events_count = Event.count
+
   end
 
   def show

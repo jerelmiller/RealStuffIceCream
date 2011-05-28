@@ -1,33 +1,35 @@
-.form
+.events-form
   - form_for([@event]) do |f|
     = f.error_messages
-    .label
-      = f.label :title
-      %br/
-      = f.text_field :title
-    .label
-      = f.label :description
-      %br/
-      = f.text_area :description
-    .label
-      = f.label :start_time
-      %br/
-      = f.text_field :start_date, :size => 10, :value => (@event.start_date.blank? ? '' : @event.start_date.to_s(:dateNums))
-      at
-      = f.text_field :start_time, :size => 10, :value => (@event.start_time.blank? ? '' : @event.start_time.to_s(:time))
-    .label
-      = f.label :end_time
-      %br/
-      = f.text_field :end_date, :size => 10, :value => (@event.end_date.blank? ? '' : @event.end_date.to_s(:dateNums))
-      at
-      = f.text_field :end_time, :size => 10, :value => (@event.end_time.blank? ? '' : @event.end_time.to_s(:time))
-    .label
-      = f.label :location
-      %br/
-      = f.text_field :location
-    .label
-      = f.label :link
-      %br/
-      = f.text_field :link
-    %p
-      = f.submit 'Save'
+    #left
+      .label
+        = f.label :title
+        %br/
+        = f.text_field :title
+      .label
+        = f.label :description
+        %br/
+        = f.text_area :description
+    #right
+      .label
+        = f.label :start_time
+        %br/
+        = f.text_field :start_date, :size => 10, :value => (@event.start_date.blank? ? '' : @event.start_date.to_s(:dateNums))
+        at
+        = f.text_field :start_time, :size => 10, :value => (@event.start_time.blank? ? '' : @event.start_time.to_s(:time))
+      .label
+        = f.label :end_time
+        %br/
+        = f.text_field :end_date, :size => 10, :value => (@event.end_date.blank? ? '' : @event.end_date.to_s(:dateNums))
+        at
+        = f.text_field :end_time, :size => 10, :value => (@event.end_time.blank? ? '' : @event.end_time.to_s(:time))
+      .label
+        = f.label :location
+        %br/
+        = f.text_field :location
+      .label
+        = f.label :link
+        %br/
+        = f.text_field :link
+      %p
+        = f.submit 'Save'

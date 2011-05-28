@@ -104,7 +104,15 @@ body {
 .form {
 	width: 400px;
 	margin: 30px auto 0px auto;
-	height: 80%;
+	font-family: 'Schoolbell', sans-serif;
+	font-size: 1.2em;
+	text-shadow: 2px 2px 4px #555;
+}
+
+.events-form {
+	width: 1050px;
+	margin: 30px auto 0px auto;
+	overflow: hidden;
 	font-family: 'Schoolbell', sans-serif;
 	font-size: 1.2em;
 	text-shadow: 2px 2px 4px #555;
@@ -130,6 +138,8 @@ body {
 	-webkit-border-radius: 10px;
 	list-style-type: none;
     border: solid;
+    width: 350px;
+    margin: 0px auto 20px auto;
     border-color: red;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -488,4 +498,16 @@ td {
   color: #900; 
   border: solid;
   border-color: #900;
+}
+
+#left {
+	float: left;
+	width: 500px;
+	margin-left: 10px;
+}
+
+#right {
+	float: right;
+	width: 500px;
+	margin-right: 10px;
 }

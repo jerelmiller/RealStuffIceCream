@@ -9,9 +9,13 @@ $(function() {
 											$('#event_end_date').datepicker();
 											$('#event_end_date').datepicker("option", "minDate", min);
 										}});
-										
-	var min = $('#event_start_date').datepicker("getDate")	;			
-	$('#event_end_date').datepicker({minDate: min, maxDate: '+1y', selectOtherMonths: true, showOtherMonths: true})
+	
+	if (document.getElementById('event_start_date').value == null) {					
+		var min = $('#event_start_date').datepicker("getDate");			
+		$('#event_end_date').datepicker({minDate: min, maxDate: '+2y', selectOtherMonths: true, showOtherMonths: true});
+	} else {
+		$('#event_end_date').datepicker({minDate: '0', maxDate: ' +2y', selectOtherMonths: true, showOtherMonths: true})
+	}
 	
 	$(".ui-datepicker-calendar a").live("click",function(event){event.preventDefault();})
 																		
